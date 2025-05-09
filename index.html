@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zontal - Arcade Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container-zon">
+            <div class="logo">
+                <img src="https://via.placeholder.com/40x40?text=Logo" alt="Zontal Logo">
+                <h1>Zontal</h1>
+            </div>
+            <nav>
+                <span class="nav-toggle">☰</span>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#blogs">Blogs</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <form class="search-form">
+                        <input type="text" class="search-input" placeholder="Search games..." autocomplete="off">
+                    </form>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container-zon">
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Featured Games Slider -->
+            <section class="featured-game mb-8">
+                <h2>Featured Games</h2>
+                <div class="slider">
+                    <div class="slider-wrapper">
+                        <!-- Sample Featured Games -->
+                        <div class="slide">
+                            <a href="game.html">
+                                <img src="https://via.placeholder.com/400x300?text=Imposter+Battle+Z" alt="Imposter Battle Z Dragon Warriors">
+                                <div class="gradient-overlay"></div>
+                                <div class="play-text">Play Now</div>
+                                <h3>Imposter Battle Z Dragon Warriors</h3>
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="#game2">
+                                <img src="https://via.placeholder.com/400x300?text=Color+Ball+Smack" alt="Color Ball Smack">
+                                <div class="gradient-overlay"></div>
+                                <div class="play-text">Play Now</div>
+                                <h3>Color Ball Smack</h3>
+                            </a>
+                        </div>
+                        <div class="slide">
+                            <a href="#game3">
+                                <img src="https://via.placeholder.com/400x300?text=Space+Shooter" alt="Space Shooter">
+                                <div class="gradient-overlay"></div>
+                                <div class="play-text">Play Now</div>
+                                <h3>Space Shooter</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- All Games -->
+            <section class="all-games mb-8">
+                <h2>All Games</h2>
+                <div id="zon_games" class="masonry-grid">
+                    <!-- No Results Message -->
+                    <div class="no-results" style="display: none;">
+                        <p>No games found matching your search.</p>
+                    </div>
+                    <!-- Sample Games (15 games for initial load) -->
+                    <a href="#game1">
+                        <div class="card-body small">
+                            <img src="https://via.placeholder.com/200x120?text=Game+1" alt="Game 1">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 1</h3>
+                        </div>
+                    </a>
+                    <a href="#game2">
+                        <div class="card-body small">
+                            <img src="https://via.placeholder.com/200x120?text=Game+2" alt="Game 2">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 2</h3>
+                        </div>
+                    </a>
+                    <a href="#game3">
+                        <div class="card-body large">
+                            <img src="https://via.placeholder.com/200x240?text=Game+3" alt="Game 3">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 3</h3>
+                        </div>
+                    </a>
+                    <a href="#game4">
+                        <div class="card-body small">
+                            <img src="https://via.placeholder.com/200x120?text=Game+4" alt="Game 4">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 4</h3>
+                        </div>
+                    </a>
+                    <a href="#game5">
+                        <div class="card-body tall">
+                            <img src="https://via.placeholder.com/200x180?text=Game+5" alt="Game 5">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 5</h3>
+                        </div>
+                    </a>
+                    <a href="#game6">
+                        <div class="card-body small">
+                            <img src="https://via.placeholder.com/200x120?text=Game+6" alt="Game 6">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 6</h3>
+                        </div>
+                    </a>
+                    <a href="#game7">
+                        <div class="card-body small">
+                            <img src="https://via.placeholder.com/200x120?text=Game+7" alt="Game 7">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 7</h3>
+                        </div>
+                    </a>
+                    <a href="#game8">
+                        <div class="card-body large">
+                            <img src="https://via.placeholder.com/200x240?text=Game+8" alt="Game 8">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 8</h3>
+                        </div>
+                    </a>
+                    <a href="#game9">
+                        <div class="card-body small">
+                            <img src="https://via.placeholder.com/200x120?text=Game+9" alt="Game 9">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 9</h3>
+                        </div>
+                    </a>
+                    <a href="#game10">
+                        <div class="card-body tall">
+                            <img src="https://via.placeholder.com/200x180?text=Game+10" alt="Game 10">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 10</h3>
+                        </div>
+                    </a>
+                    <a href="#game11">
+                        <div class="card-body small">
+                            <img src="https://via.placeholder.com/200x120?text=Game+11" alt="Game 11">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 11</h3>
+                        </div>
+                    </a>
+                    <a href="#game12">
+                        <div class="card-body small">
+                            <img src="https://via.placeholder.com/200x120?text=Game+12" alt="Game 12">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 12</h3>
+                        </div>
+                    </a>
+                    <a href="#game13">
+                        <div class="card-body large">
+                            <img src="https://via.placeholder.com/200x240?text=Game+13" alt="Game 13">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 13</h3>
+                        </div>
+                    </a>
+                    <a href="#game14">
+                        <div class="card-body small">
+                            <img src="https://via.placeholder.com/200x120?text=Game+14" alt="Game 14">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 14</h3>
+                        </div>
+                    </a>
+                    <a href="#game15">
+                        <div class="card-body tall">
+                            <img src="https://via.placeholder.com/200x180?text=Game+15" alt="Game 15">
+                            <div class="gradient-overlay"></div>
+                            <div class="play-text">Play Now</div>
+                            <h3>Game 15</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="zon-loader">
+                    <a class="small"></a>
+                    <a class="large"></a>
+                    <a class="tall"></a>
+                    <a class="small"></a>
+                    <a class="large"></a>
+                </div>
+            </section>
+
+            <!-- Category Tabs -->
+            <section class="category-tabs mb-8">
+                <h2>Browse by Category</h2>
+                <div class="tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-tab="action">Action</button>
+                        <button class="tab-btn" data-tab="shooting">Shooting</button>
+                        <button class="tab-btn" data-tab="puzzles">Puzzles</button>
+                    </div>
+
+                    <!-- Action Tab -->
+                    <div class="tab-content active" id="action">
+                        <div class="masonry-grid">
+                            <a href="#action1">
+                                <div class="card-body small">
+                                    <img src="https://via.placeholder.com/200x120?text=Action+Game+1" alt="Action Game 1">
+                                    <div class="gradient-overlay"></div>
+                                    <div class="play-text">Play Now</div>
+                                    <h3>Action Game 1</h3>
+                                </div>
+                            </a>
+                            <a href="#action2">
+                                <div class="card-body large">
+                                    <img src="https://via.placeholder.com/200x240?text=Action+Game+2" alt="Action Game 2">
+                                    <div class="gradient-overlay"></div>
+                                    <div class="play-text">Play Now</div>
+                                    <h3>Action Game 2</h3>
+                                </div>
+                            </a>
+                            <a href="#action3">
+                                <div class="card-body tall">
+                                    <img src="https://via.placeholder.com/200x180?text=Action+Game+3" alt="Action Game 3">
+                                    <div class="gradient-overlay"></div>
+                                    <div class="play-text">Play Now</div>
+                                    <h3>Action Game 3</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Shooting Tab -->
+                    <div class="tab-content" id="shooting">
+                        <div class="masonry-grid">
+                            <a href="#shooting1">
+                                <div class="card-body small">
+                                    <img src="https://via.placeholder.com/200x120?text=Shooting+Game+1" alt="Shooting Game 1">
+                                    <div class="gradient-overlay"></div>
+                                    <div class="play-text">Play Now</div>
+                                    <h3>Shooting Game 1</h3>
+                                </div>
+                            </a>
+                            <a href="#shooting2">
+                                <div class="card-body large">
+                                    <img src="https://via.placeholder.com/200x240?text=Shooting+Game+2" alt="Shooting Game 2">
+                                    <div class="gradient-overlay"></div>
+                                    <div class="play-text">Play Now</div>
+                                    <h3>Shooting Game 2</h3>
+                                </div>
+                            </a>
+                            <a href="#shooting3">
+                                <div class="card-body tall">
+                                    <img src="https://via.placeholder.com/200x180?text=Shooting+Game+3" alt="Shooting Game 3">
+                                    <div class="gradient-overlay"></div>
+                                    <div class="play-text">Play Now</div>
+                                    <h3>Shooting Game 3</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Puzzles Tab -->
+                    <div class="tab-content" id="puzzles">
+                        <div class="masonry-grid">
+                            <a href="#puzzle1">
+                                <div class="card-body small">
+                                    <img src="https://via.placeholder.com/200x120?text=Puzzle+Game+1" alt="Puzzle Game 1">
+                                    <div class="gradient-overlay"></div>
+                                    <div class="play-text">Play Now</div>
+                                    <h3>Puzzle Game 1</h3>
+                                </div>
+                            </a>
+                            <a href="#puzzle2">
+                                <div class="card-body large">
+                                    <img src="https://via.placeholder.com/200x240?text=Puzzle+Game+2" alt="Puzzle Game 2">
+                                    <div class="gradient-overlay"></div>
+                                    <div class="play-text">Play Now</div>
+                                    <h3>Puzzle Game 2</h3>
+                                </div>
+                            </a>
+                            <a href="#puzzle3">
+                                <div class="card-body tall">
+                                    <img src="https://via.placeholder.com/200x180?text=Puzzle+Game+3" alt="Puzzle Game 3">
+                                    <div class="gradient-overlay"></div>
+                                    <div class="play-text">Play Now</div>
+                                    <h3>Puzzle Game 3</h3>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Categories Grid -->
+    <section class="categories mb-8">
+        <div class="container-zon">
+            <h2>Explore Categories</h2>
+            <div class="grid">
+                <a href="#adventure"><span>Adventure</span></a>
+                <a href="#shooting"><span>Shooting</span></a>
+                <a href="#3d"><span>3D</span></a>
+                <a href="#sports"><span>Sports</span></a>
+                <a href="#arcade"><span>Arcade</span></a>
+                <a href="#hypercasual"><span>Hypercasual</span></a>
+                <a href="#puzzles"><span>Puzzles</span></a>
+                <a href="#clicker"><span>Clicker</span></a>
+                <a href="#girls"><span>Girls</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container-zon">
+            <div class="footer-links">
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#contact">Contact Us</a>
+            </div>
+            <div class="social-icons">
+                <a href="#facebook">📘</a>
+                <a href="#twitter">🐦</a>
+                <a href="#instagram">📸</a>
+            </div>
+            <p>© 2025 Zontal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
