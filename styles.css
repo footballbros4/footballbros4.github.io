@@ -1,0 +1,498 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: #e2e8f0;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container-zon {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Headings */
+h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #f8fafc;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #1e3a8a 0%, #3b82f6 100%);
+    padding: 0.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container-zon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+header .logo img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+/* Navigation Toggle */
+.nav-toggle {
+    display: block;
+    font-size: 1.2rem;
+    color: #e2e8f0;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+header .nav-menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #1e3a8a;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 0.5rem;
+    z-index: 1000;
+}
+
+header .nav-menu.active {
+    display: flex;
+}
+
+header .nav-menu li {
+    list-style: none;
+    width: 100%;
+}
+
+header .nav-menu a {
+    display: block;
+    color: #e2e8f0;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+header .nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Desktop Navigation (when container is wide enough) */
+header .container-zon:not(.mobile-nav) .nav-toggle {
+    display: none;
+}
+
+header .container-zon:not(.mobile-nav) .nav-menu {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    background: none;
+    padding: 0;
+    width: auto;
+}
+
+header .container-zon:not(.mobile-nav) .nav-menu li {
+    width: auto;
+}
+
+header .container-zon:not(.mobile-nav) .nav-menu a {
+    padding: 0.3rem 0.6rem;
+}
+
+/* Search */
+header .search-container {
+    position: relative;
+}
+
+header .search-icon {
+    font-size: 1rem;
+    color: #e2e8f0;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+header .search-form {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 15rem;
+    max-width: 90vw;
+    z-index: 1000;
+}
+
+header .search-form.active {
+    display: block;
+}
+
+header .search-input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 1rem;
+    background: #ffffff;
+    color: #1e293b;
+    outline: none;
+}
+
+/* No Results Message */
+.no-results {
+    text-align: center;
+    padding: 1rem;
+    color: #94a3b8;
+    font-size: 1rem;
+    width: 100%;
+}
+
+/* Featured Games Slider */
+.featured-game {
+    margin-bottom: 2rem;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    min-height: 150px;
+    max-height: 300px;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.slider-wrapper {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+}
+
+.slide a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide .gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+}
+
+.slide .play-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    opacity: 0;
+}
+
+.slide a:hover .play-text {
+    opacity: 1;
+}
+
+.slide h3 {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+}
+
+/* Masonry Grid for All Games and Tabs */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.masonry-grid a {
+    display: block;
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-decoration: none;
+    break-inside: avoid;
+}
+
+.masonry-grid a.hidden {
+    display: none;
+}
+
+.card-body {
+    position: relative;
+    width: 100%;
+}
+
+.card-body.small {
+    padding-top: 60%;
+}
+
+.card-body.large {
+    padding-top: 120%;
+}
+
+.card-body.tall {
+    padding-top: 90%;
+}
+
+.masonry-grid img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.masonry-grid .gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+}
+
+.masonry-grid .play-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    opacity: 0;
+}
+
+.masonry-grid a:hover .play-text {
+    opacity: 1;
+}
+
+.masonry-grid h3 {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 0.5rem;
+    padding: 0.3rem;
+    font-size: 0.8rem;
+}
+
+/* Loader for Infinite Scroll */
+.zon-loader {
+    display: none;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.zon-loader a {
+    position: relative;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background: #1e293b;
+}
+
+.zon-loader a.small {
+    padding-top: 60%;
+}
+
+.zon-loader a.large {
+    padding-top: 120%;
+}
+
+.zon-loader a.tall {
+    padding-top: 90%;
+}
+
+.zon-loader a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        left: 100%;
+    }
+}
+
+/* Tabs */
+.tab-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: 1rem;
+    cursor: pointer;
+    background: #1e293b;
+    color: #e2e8f0;
+    border: none;
+}
+
+.tab-btn.active {
+    background: #f43f5e;
+    color: #ffffff;
+}
+
+.tab-btn:hover:not(.active) {
+    background: #334155;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Categories Grid */
+.categories .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 0.75rem;
+}
+
+.categories a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    height: 5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(45deg, #1e3a8a, #3b82f6);
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
+.categories a:hover {
+    background: linear-gradient(45deg, #3b82f6, #60a5fa);
+}
+
+/* Footer */
+footer {
+    background: #1e293b;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+footer .container-zon {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+footer .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+footer .footer-links a {
+    color: #60a5fa;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+footer .footer-links a:hover {
+    color: #93c5fd;
+}
+
+footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+footer .social-icons a {
+    color: #e2e8f0;
+    font-size: 1rem;
+}
+
+footer .social-icons a:hover {
+    color: #60a5fa;
+}
+
+footer p {
+    font-size: 0.8rem;
+    color: #94a3b8;
+}
+
+/* Utilities */
+.mb-8 {
+    margin-bottom: 2rem;
+}
