@@ -177,3 +177,53 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Game iframe script loaded');
+
+    const fullscreenBtn = document.querySelector('.fullscreen-btn');
+    const iframe = document.querySelector('.game-iframe iframe');
+
+    if (!fullscreenBtn || !iframe) {
+        console.error('Game iframe elements not found:', {
+            fullscreenBtn: !!fullscreenBtn,
+            iframe: !!iframe
+        });
+        return;
+    }
+
+    fullscreenBtn.addEventListener('click', () => {
+        console.log('Fullscreen button clicked');
+        if (!document.fullscreenElement) {
+            // Enter fullscreen
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.webkitRequestFullscreen) { // Safari
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { // IE11
+                iframe.msRequestFullscreen();
+            }
+            fullscreenBtn.classList.add('active');
+            fullscreenBtn.textContent = 'Exit Full Screen';
+        } else {
+            // Exit fullscreen
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.webkitExitFullscreen) { // Safari
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { // IE11
+                document.msExitFullscreen();
+            }
+            fullscreenBtn.classList.remove('active');
+            fullscreenBtn.textContent = 'Full Screen';
+        }
+    });
+
+    // Update button state on fullscreen change
+    document.addEventListener('fullscreenchange', () => {
+        if (!document.fullscreenElement) {
+            fullscreenBtn.classList.remove('active');
+            fullscreenBtn.textContent = 'Full Screen';
+        }
+    });
+});
